@@ -84,6 +84,7 @@ body{
             gap: 10px;
             font-size: var(--myfont);
             list-style: none;
+            animation: ul 20s linear infinite;
             @media screen and (min-width:600px) {
                 height: auto;
                 margin: auto;
@@ -92,6 +93,21 @@ body{
                 flex-wrap: wrap;
                 flex-direction: row;
             
+            }
+            @keyframes ul {
+                10%{
+                    color: white;
+                    transition-delay: 4s;
+                }
+                40%{
+                    color: crimson;
+                }
+                70%{
+                    color: black;
+                }
+                100%{
+                    color: orchid;
+                }
             }
             li{
                 padding: 20px;
