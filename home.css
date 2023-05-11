@@ -230,12 +230,12 @@ header {
   color: goldenrod;
 }
 .container .navbar-items {
-  margin: auto -25%;
+  margin: auto -22%;
   max-width: 100%;
   font-variant: small-caps;
   z-index: 80;
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 25%;
 }
 @media screen and (max-width: 540px) {
@@ -290,7 +290,7 @@ header {
 .container .navbar-items ul li #icons {
   color: aqua;
   font-size: medium;
-  margin-left: -5px;
+  margin-left: -15px;
   position: absolute;
 }
 .container .navbar-items ul li #icons:hover {
@@ -301,7 +301,7 @@ header {
 .container .navbar-items ul li #ikons {
   color: aqua;
   font-size: medium;
-  margin-left: -5px;
+  margin-left: -15px;
   position: absolute;
 }
 .container .navbar-items ul li #ikons:hover {
@@ -312,6 +312,7 @@ header {
 .container .navbar-items ul li #about {
   display: none;
   margin: auto;
+  background-color: gray;
 }
 @media screen and (max-width: 600px) {
   .container .navbar-items ul li #about {
@@ -342,6 +343,7 @@ header {
   display: none;
   margin: auto;
   width: auto;
+  background-color: gray;
 }
 @media screen and (max-width: 600px) {
   .container .navbar-items ul li #departs {
