@@ -76,19 +76,18 @@ body{
             @include myexplain();
             background: var(--mybg);
             border-radius: 10px;
-            max-width: 30%;
-            width: auto;
-            text-align: justify;
+            width: 30%;
+            margin: auto;
             height: auto;
+            gap: 10px;
             color: var(--mywhite);
             flex-direction: row;
             flex-wrap: wrap;
-            gap: 10px;
             font-size: var(--myfont);
             list-style: none;
             animation: ul 8s linear infinite;
-            @media screen and (min-width:600px) {
-                height: auto;
+            @media screen and (max-width:540px) {
+                padding: auto;
                 margin: auto;
                 width: 89%;
             
@@ -109,13 +108,15 @@ body{
                 }
             }
             li{
-                padding: 20px;
-                font-size: 19px;
+                padding: 10px;
+                color: white;
+                list-style: none;
                 margin: var(--mymargin);
                 font-variant: small-caps;
                 @media screen and (max-width: 540px) {
                     margin: 5px 8px;
                     width: 30%;
+    
                 }
             }
 
