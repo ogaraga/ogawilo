@@ -157,6 +157,9 @@ body {
   font-variant: small-caps;
   margin-top: -5px;
 }
+.main-container .vision-mission .px1 {
+  text-align: justify;
+}
 .main-container .vision-mission #px {
   font-size: var(--myfont);
   margin: auto;
