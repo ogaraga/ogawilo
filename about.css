@@ -89,6 +89,7 @@ body {
   gap: 10px;
   font-size: var(--myfont);
   list-style: none;
+  animation: ul 8s linear infinite;
 }
 @media screen and (min-width: 600px) {
   .main-container .second-div ul {
@@ -98,6 +99,21 @@ body {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+}
+@keyframes ul {
+  10% {
+    color: white;
+    transition-delay: 4s;
+  }
+  40% {
+    color: crimson;
+  }
+  70% {
+    color: black;
+  }
+  100% {
+    color: orchid;
   }
 }
 .main-container .second-div ul li {
