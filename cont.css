@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: visible;
+  overflow-y: visible;
+  overflow-x: hidden;
   max-width: 100vw;
   max-height: auto;
 }
@@ -38,6 +39,7 @@
 
 body {
   background: gray;
+  width: 100vw;
 }
 
 .contact-form {
@@ -62,13 +64,20 @@ body {
 .form-container {
   background: linear-gradient(to bottom, var(--mybg), aliceblue, green, lightblue);
   max-width: 100vw;
-  width: 100%;
+  width: 80%;
   height: 90%;
   display: grid;
   place-content: center;
   margin: auto;
   padding-top: 20px;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  .form-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
 }
 .form-container form {
   background-color: rgba(0, 0, 0, 0.841);
@@ -78,7 +87,7 @@ body {
 }
 @media screen and (max-width: 500px) {
   .form-container form {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin: auto;
   }
@@ -98,6 +107,14 @@ body {
   outline: none;
   font-size: 20px;
 }
+@media screen and (max-width: 540px) {
+  .form-container form input {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    font-size: 15px;
+  }
+}
 .form-container form input:focus-visible {
   background-color: coral;
 }
@@ -111,6 +128,14 @@ body {
   outline: none;
   font-size: 20px;
 }
+@media screen and (max-width: 540px) {
+  .form-container form select {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    font-size: 15px;
+  }
+}
 .form-container form textarea {
   margin-top: 10px;
   border: none;
@@ -120,6 +145,14 @@ body {
 .form-container form textarea:focus-within {
   background-color: antiquewhite;
   color: orangered;
+}
+@media screen and (max-width: 540px) {
+  .form-container form textarea {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    font-size: 20px;
+  }
 }
 .form-container form #submit {
   padding: 10px 20px;
@@ -135,6 +168,12 @@ body {
   transition: all 0.4s;
   cursor: pointer;
 }
+@media screen and (max-width: 540px) {
+  .form-container form #submit {
+    font-size: 15px;
+    padding: 5px 5px;
+  }
+}
 .form-container form #reset {
   padding: 10px 20px;
   background-color: grey;
@@ -147,6 +186,12 @@ body {
   background-color: rosybrown;
   transition: all 0.4s;
   cursor: pointer;
+}
+@media screen and (max-width: 540px) {
+  .form-container form #reset {
+    font-size: 15px;
+    padding: 5px 5px;
+  }
 }
 
 #myfooter {
@@ -165,9 +210,12 @@ body {
   #myfooter {
     width: 100%;
     height: auto;
-    overflow: hidden;
     margin-bottom: 0;
     padding-top: 10px;
-    margin: auto 10px;
+    margin: auto;
   }
+}
+#myfooter P {
+  margin: auto 10px;
+  padding: auto 10px;
 }/*# sourceMappingURL=cont.css.map */

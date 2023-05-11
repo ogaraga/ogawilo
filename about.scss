@@ -76,7 +76,9 @@ body{
             @include myexplain();
             background: var(--mybg);
             border-radius: 10px;
-            max-width: 100%;
+            max-width: 30%;
+            width: auto;
+            text-align: justify;
             height: auto;
             color: var(--mywhite);
             flex-direction: row;
@@ -88,10 +90,7 @@ body{
             @media screen and (min-width:600px) {
                 height: auto;
                 margin: auto;
-                width: 100%;
-                display: flex;
-                flex-wrap: wrap;
-                flex-direction: row;
+                width: 89%;
             
             }
             @keyframes ul {
@@ -106,7 +105,7 @@ body{
                     color: black;
                 }
                 100%{
-                    color: orchid;
+                    color: aqua;
                 }
             }
             li{
@@ -114,6 +113,10 @@ body{
                 font-size: 19px;
                 margin: var(--mymargin);
                 font-variant: small-caps;
+                @media screen and (max-width: 540px) {
+                    margin: 5px 8px;
+                    width: 30%;
+                }
             }
 
         }
