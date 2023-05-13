@@ -79,7 +79,7 @@ body{
         width: 100%;
         padding: 50px 100px;
         height: auto;
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 540px) {
             width: 100%;
             height: auto;
             margin: auto;
@@ -90,7 +90,14 @@ body{
             color: aqua;
             font-size: 16px;
             font-variant: small-caps;
-        
+        }
+            i{
+            position: relative;
+            left: 0;
+            margin-left: -20%;
+            top: 40px;
+            text-align: justify;
+            
         }
         input{
             margin: 5px auto;
@@ -101,9 +108,9 @@ body{
             outline: none;
             font-size: 20px;
             @media screen and (max-width: 540px) {
-                width: 100%;
+                width: auto;
                 height: auto;
-                margin: auto;
+                margin: 5px auto;
                 font-size: 15px;
             }
            

@@ -46,9 +46,9 @@
             <label for="phone">Telephone</label><br>
             <input type="tel" name="phone" id="phone" placeholder="Enter Your Phone No" required><br>
             <label for="Sex">Gender</label><br>
-            <input type="checkbox" name="male" id="male" required>
+            <input type="checkbox" name="male" id="male">
             <label for="male">Male</label><br>
-            <input type="checkbox" name="female" id="female" required>
+            <input type="checkbox" name="female" id="female">
             <label for="name">Female</label><br>
             <label for="addr">Residential Address</label><br>
             <input type="text" name="address" id="address" placeholder="Enter Your house Address" required><br>
@@ -86,7 +86,7 @@
                 <option value="country">Tunisia</option>
                 <option value="country">Togo</option>
                 <option value="country">Tanzania</option>
-                <option value="country">cameroon</option>
+                <option value="country">Japan</option>
                 <option value="country">United Arab Emirates</option>
                 <option value="country">United States</option>
                 <option value="country">United Kingdom</option>
@@ -97,10 +97,12 @@
             <label for="Message" id="message">Drop Your message here 
             <span style="color: coral; font-size: 23px;" class="fa-solid fa-down-long"></span>
             </label> <br>
-            <textarea name="" id="" cols="30" rows="10"></textarea><br>
+            <textarea name="" id="" cols="30" rows="10" required maxlength="200" minlength="30"></textarea><br>
             <button type="reset" id="reset" >Reset</button>
             <button type="submit" id="submit">Submit</button>
+            <i id="text_content"></i>
         </form>
+        
     </div>
     <!-- footer section -->
     <footer id="myfooter">
@@ -111,20 +113,21 @@
    <script>
     const container = document.getElementById("form__container")
     const mySubmit = document.getElementById("submit");
-    const myName = document.getElementById("fullname").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const time = document.getElementById("time").value;
+    const myName = document.getElementById("fullname");
+    const email = document.getElementById("email");
+    const phone = document.getElementById("phone");
+    const time = document.getElementById("time");
     const male = document.getElementById("male");
     const female = document.getElementById("female");
-    const address = document.getElementById("address").value;
-    const mycomment = document.getElementById("message").value;
-    const country = document.getElementById("selected").value;
-    const statuz = document.getElementById("prefix").value;
+    const address = document.getElementById("address");
+    const mycomment = document.getElementById("message");
+    const country = document.getElementById("selected");
+    const statuz = document.getElementById("prefix");
     const myForm = document.getElementById("form__wrapper");
+    let text_Content = document.getElementById("text_content"); 
     mySubmit.onclick = ()=>{
-        if (male.checked || female.checked && [myName, email, phone, time, address,
-            mycomment, statuz, country]) {
+        if (myName.value != "" && statuz.value && address.value != "" && country.value 
+             && time.value && phone.value && email.value !="" && mycomment.value != "" && (male.checked || female.checked)) {
             myForm.style.display = "none";
             container.innerText = "Your submission is well received. Thank you!";
             container.style.background = "white";
@@ -133,15 +136,13 @@
             container.style.color = "green";
 
         }
+
         else{
-            myForm.innerText = "oops! please, fill in all necessary blocks";
-            myForm.style.color = "red";
-            myForm.style.background = "white";
-            myForm.style.width = "100%";
+            text_Content.textContent = "Oops! Please, fill in all necessary blocks";
+            text_Content.style.color = "red";
+        
         }
     }
-
-
     </script>
 </body>
 </html>

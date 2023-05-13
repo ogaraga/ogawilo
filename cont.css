@@ -85,7 +85,7 @@ body {
   padding: 50px 100px;
   height: auto;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
   .form-container form {
     width: 100%;
     height: auto;
@@ -98,6 +98,13 @@ body {
   font-size: 16px;
   font-variant: small-caps;
 }
+.form-container form i {
+  position: relative;
+  left: 0;
+  margin-left: -20%;
+  top: 40px;
+  text-align: justify;
+}
 .form-container form input {
   margin: 5px auto;
   margin-bottom: 10px;
@@ -109,9 +116,9 @@ body {
 }
 @media screen and (max-width: 540px) {
   .form-container form input {
-    width: 100%;
+    width: auto;
     height: auto;
-    margin: auto;
+    margin: 5px auto;
     font-size: 15px;
   }
 }
