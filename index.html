@@ -4,539 +4,225 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ogaranya Widows Empowernment</title>
 </head>
-<style>
-
-    #close{
-        font-size: 20px;
-        position: fixed;
-        display: none;
-        margin-top: -20px;
-        margin-bottom: 10px; 
-    }
-    @media screen and (max-width:540px) {
-        #close{
-        font-size: 20px;
-        position: fixed;
-        text-align: center;
-        margin-top: -35px;
-        margin-left: 50%;
-        z-index: 10;
-        }
-        #close:hover{
-            cursor: pointer;
-        }
-    
-    }
-    .fa-bars{
-        font-size: 20px;
-        position: fixed;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        margin-top: -20px;
-        margin-bottom: 10px;
-    }
-    @media screen and (max-width:540px) {
-        .fa-bars{
-        font-size: 20px;
-        position: fixed;
-        margin-left: 50%;
-        display: flex;
-        margin-top: -35px;
-        align-items: center;
-        justify-content: center;
-        z-index: 10;
-        }
-        .fa-bars:hover{
-            cursor: pointer;
-        }
-    
-    }
-</style>
-<body id="mybody">
-    
-<!------------ All bodycontianer --------------->
-
-            <!-- preloader page -->
-    <section class="preloader-container">
-        <div class="preloader" id="loader"></div>
+<body id="boding">
+    <!-- preloader section -->
+    <section class="loader-container">
+    <div id="pageloader" class="page-loader"></div>
     </section>
+    <!-- The main body including the header -->
+    <section id="main-container">
+            <header>
+                <nav-bar class="container">
+                    <div class="logo">
+                        <p class="p1">One widow = Nations</p>
+                    
+                        <h3 id="h3">Vision:</h3>
+                        <p class="p2">To be World premier widows' empowerment and liberty Organisation with dominance in the hinterland of african continent</p>
+                        <h3 id="h4">Mission:</h3>
+                        <p class="p3">To deliver good services in a timely manner by reaching out to women who are bereft of their spouses through our multifaceted humanitarian aids</p>
+                        <p class="p4">Security = For all</p>
+                        
+                    </div>
+    <!-- The close and open icons(togglers) -->
+                    <div class="toggle-bars">
+                    <span id="open-bar" class="fa-solid fa-bars"></span>
+                    <span id="close-bar" class="fa-solid fa-xmark"></span>
+                    </div>
+        <!-- Navbar menu items and their nodechildren -->
+                    <div class="navbar-items">
+                        <ul id="menu-items">
+                            <li><a href="index.html">HOME</a></li>
+                            <li><a id="about_us" href="#">ABOUT US</a><i id="icons" class="fa-solid fa-caret-down"></i>
+                                    <div id="about">
+                                        <a href="about.html" class="contus">Who we Are</a>
+                                        <a href="cont.html" class="contus">Contact Us</a>
+                                        <a href="blog.html" class="contus">Blogs</a>
+                                        <a href="cont.html" class="contus">video-Photo Gallery</a>
+                                    </div>
+                            </li>
+                            <li><a id="departing" href="#">DEPTS & SERVICES</a><i id="ikons" class="fa-solid fa-caret-down"></i>
+                                <div id="departs">
+                                    <a href="" target="_blank" class="depart-links">Human Rights Depts</a>
+                                    <a href="" target="_blank" class="depart-links">Widows Empowerment Depts</a>
+                                    <a href="" target="_blank" class="depart-links">Crisis Control Depts</a>
+                                </div>
+                            </li>
+                            <li><a id="donate" href="don.html" target="_blank">DONATE HERE</a></li>
+                        </ul>
+                    </div>
+                </nav-bar>
 
-<section  id="bodding" style="display: none;">
-  
-    <!-- CHATBOT SECTION -->
-    <h2 id="lets_chat">Click on me<i class="fa-brands fa-rocketchat"></i></h2>
-    <div class="chatbot-container" id="chatbox">
-        <div class="chatbot-message">
-            <p id="p">Hey! I'm your virtual assistant: <em style="color:green">I'm listening..</em></p>
-            <p id="chatbottext"></p>
-            <div class="input-block">
-                <input type="text" id="textbox" autocomplete="on" autofocus="true" placeholder="Enter your text...">
-                <button type="button" id="end">EndChat</button>
-                <input type="button" id = enter value="Send">
-            </div>
-        </div>
-    </div>
-    <!-- Navigation Bar section -->
-    <nav>
-        <p class="ports">My Portfolio</p>
-        <span class="fa-solid fa-toggle-off" style="display: none;"></span>
-        <span class="fa-solid fa-toggle-on"></span>
-        <span class="fa-solid fa-magnifying-glass" id="glass"></span>
-        <span class="fa-solid fa-xmark" id="klose"></span>
-        <input type="search" id="mytext">
-        <div>
+            </header>
         
-        <!-- search items on search box -->
-            <div class="tested" id="drop_up" style="display: none; list-style: none;">
-                <a href="index.html" class="humz" style="color: white; padding: 10px; margin: 10px; text-decoration: none;">HOME</a>
-                <a href="about.html" class="humz" style="color: white; padding: 10px; margin: 10px; text-decoration: none;">ABOUT ME</a>
-                <a href="edu.html" class="humz" style="color: white; padding: 10px; margin: 10px; text-decoration: none;" >EDUCATION</a>
-                <a href="pubs.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >PUBLICATIONS @ PROJECTS</a>
-                <a href="work.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >WORK-EXPERIENCE</a>
-                <a href="cont.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >CONTACT ME</a>
-                <a href="ngo.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >NGO WEBSITE</a>
-                <a href="nev.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >NEVER QUIT YET</a>
-                <a href="surv.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >SURVIVING THE ODDS OF</a>
-                <a href="Calculator.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >CALCULATORS FOR YOU</a>
-                <a href="https://w3schools.com" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >W3SCHOOLS FOR WEB DEVELOPERS</a>
-                <a href="https://nodejs.org/en" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >NODE JS FOR DEVELOPERS</a>
-                <a href="ana.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >ANATHOMY OF LIFE</a>
-                <a href="alg.html" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >ALGORITHM OF LIFE</a>
-                <a href="https://boxicons.com/" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >BOXICONS</a>
-                <a href="https://learn.gomycode.co/login" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >GOMYCODE ENVIRONMENT</a>
-                <a href="https://google.com" class="humz" style="color: white; padding: 10px;  margin: 10px; text-decoration: none;" >GOOGLE</a>
-               
-            </div>
-  
-        </div>
-        <div class="tested" id="dropdown">
-               <a href="index.html" class="hom">HOME</a>
-               <a href="about.html" class="hom">ABOUT ME</a>
-               <a href="edu.html" class="hom">EDUCATION</a>
-               <a href="work.html" class="hom">WORK-XPERIENCE</a>
-               <a href="cont.html" class="hom">CONTACT ME</a>
-               <a href="pubs.html" class="hom">MY PUBLICATIONS</a>
-        </div>
-        <i id ="open" class="fa-solid fa-bars" style="z-index: 2; color:white"></i>
-        <p id ="close" style="z-index: 2; color:white">X</p>
-        <p id="God">God is behind all sound learning world-wide:
-            <br> by Him and for Him, we shall tech the world!</p>
-    </nav>
-    <div id="ogaraga">
-        <h1>"Raymond Ogaraga Uche" is my name</h1>
-        <p id="raywise">You are warmly welcomed to my World!</p>
-    </div>
-    <!-- picture section and vital info -->
-    <section class="imag-info">
-        <i id="exact-timedate"></i>
-        <h3><em>Web-developer</em></h3>
-        <img src="my pic-1.jpg" alt="">
-        <p><span>Email</span>: raymond.ogaraga@gmail.com <br>
-        <span>Tel</span>: 08069304370 <br> 
-        <span>Hobbies</span>: Football, Tennis and writing <br>
-        <h2 style="text-indent: 7px;">Author: <a href="pubs.html">Click here! <b style="opacity: 0.5; font-size: 12px;">click disabled on mobile</b></a></h2>  
-        </p>
-    </section>
-    <!-- Social media contacts -->
-    <section class="social-media">
-        <p>You can reach out to me, view my social media contents by following: </p>
-        <div class="social-3">
-        <a href="https://web.facebook.com/Raymond Ogaraga/" class="linksocial"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="https://chat.whatsapp.com/CQMd2K0vJBF8IHndx4g4QZ/" class="linksocial"><i class="fa-brands fa-whatsapp"></i></a>
-        <a href="https://twitter.com/" class="linksocial"><i class="fa-brands fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/raymond-ogaraga-2736371b0/" class="linksocial"><i class="fa-brands fa-linkedin"></i></a>
-        </div>
-    </section>
 
-    <!-- Footer section @ COPYRIGHTS -->
-    <footer>
-        <p>The <em><b>Publications & Projects</b></em> are subject to intl copyrights' laws and legislations &copy;2023. Trespassers are warned!</p>
-    </footer>
-</section>
+                <section>
+        <!--Slider animation of photo/videos  -->
+                    <div class="slider-container">
+            
+                        <div class="swiper">
+                        
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide"><img src="pic-4.jpg"></div>
+                                <div class="swiper-slide"><img src="pic-6.jpg"></div>
+                                <div class="swiper-slide"><img src="my pic-1 (2).jpg"></div>
+                                <div class="swiper-slide"><img src="pic-1.jpg"></div>
+                                <div class="swiper-slide"><img src="pic-7.jpg"></div>
+                                <div class="swiper-slide"><img src="pic-8.jpg"></div>
+                            </div>
+                            
+                            <div class="swiper-pagination"></div>
+                        
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                         </div>
+                    </div>
+                </section>
+                
+                <section class="main-content">
+                    <h1>WHAT WE BELIEVE</h1>
+                    <P id="believe"><em style="font-size: 25px; font-weight: bold; color: gold;">O</em>ur core values (8 of them) are the tenets of our faith, relationships, interactions, actions and inertions.
+                    The following cardinal values  form the bedrock of our co-operate existentialism: 'CHESERIS' is our clinical watchwords!
+                    </P>
+                    <ul>
+                        <li>Compassion</li>
+                        <li>Hardwork</li>
+                        <li>Equality</li>
+                        <li>Security</li>
+                        <li>Empathy</li>
+                        <li>Resilience</li>
+                        <li>Integrity</li>
+                        <li>Sacrifice</li>
+                    </ul>
+            </section>
 
-
+            <section class="media-content">
+                <p id="mediap"><b style="font-size: 25px; color: gold;">O</b>ur media channels are open to public and we are more than joyous to hear from you. Your testimonies are live testament of who we are, what we do and what we believe. They go a long way to add a good leap into our glorious Vision. Check them out, comment and support in what we do no matter how, where and when.</p>
+                <a href="#" target="_blank">Facebook<i class="fa-brands fa-facebook"></i></a><br>
+                <a href="#" target="_blank">Twitter<i class="fa-brands fa-twitter"></i></a><br>
+                <a href="#" target="_blank">WhatSapp<i class="fa-brands fa-whatsapp"></i></a><br>
+                <a href="#" target="_blank">Youtube<i class="fa-brands fa-youtube"></i></a><br>
+                <a href="#" target="_blank">LinkedIn<i class="fa-brands fa-linkedin"></i></a><br>
+            </section>
     
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  
-<script>
-    const enterMe = document.getElementById("enter");
-    var botChats = document.getElementById("chatbottext");
-    let clickOnMe = document.getElementById("lets_chat");
-    let endChat = document.getElementById("end");
-    let chatBox = document.getElementById("chatbox");
-    clickOnMe.onclick = ()=>{
-     if(chatBox.style.display == "none"){
-         chatBox.style.display = "block";
-         clickOnMe.style.display = "none";
-     }
-     else{
-         clickOnMe.style.display = "block";
-         chatBox.style.display = "none";
-  
-     }
- };
-    endChat.onclick = ()=>{
-     if(chatBox.style.display == "block"){
-         chatBox.style.display = "none";
-         clickOnMe.style.display = "block";
-         botChats.innerHTML = "";
-     }
-     else{
-         chatBox.style.display = "block";
-         clickOnMe.style.display = "none";
-     
-     }
-    }
-    
+            <section class="quick-link">
+                <p id="quick"> <b style="font-size: 25px;color: aqua;">T</b>o contact us or share your experience with us, kindly use the information or click on the "contact us" link below:</p>
+                <address>
+                   <b style="color: aqua;font-size: 21px;">Address</b>: Human-Rights Aradagun Badagry, <br>
+                   beside LASU Campus extension off Mosafejo rd, Lagos, Nigeria <br>
+                   Phone: +2348069304370 <br>
+                   Email : <a href="mailto:">ogaranyawilorg@gmail.com</a><br>
 
-  var textbox = document.getElementById("textbox");
-  var bot_texts = document.getElementById("chatbottext");
-  var time = new Date().toLocaleString({}, {hour:"2-digit",minute:"2-digit"});
-  
-  textbox.addEventListener("keydown", (e)=>{  
-     if(e.code == "Enter"){
-    bot_texts.innerHTML = ` ${textbox.value}<br>${ time}` + "<br>";
-    bot_texts.style.color = "crimson";
-     bot_texts.style.float = "right";
-    let input = textbox.value;
-    textbox.value = ""; 
-     setTimeout(() => {
-         if(input in bot$Me){
-         bot_texts.innerHTML = ` ${bot$Me[input]}<br>${ time}` + "<br>";
-         bot_texts.style.float = "left";
-         bot_texts.style.color = "green";
-         bot_texts.scrollIntoView({behavior:"auto"});
-         
-     }
- 
-     else{
-         bot_texts.innerHTML = `please try asking something else ${time}`; 
-         bot_texts.style.float = "left";
-         bot_texts.style.color = "green";
-         bot_texts.scrollIntoView({behavior:"auto"});
-         
-     }         
-     }, 3500);
+                   OR click below <i class="fa-solid fa-down-long"></i> <br>
+                   <a style="color: red; margin-left: 5%;" href="cont.html" target="_blank">CONTACT US</a>
+                   </address>
+
+                </section>
+                <footer id="myfooter">
+                    <p>The information, videos and images/photoes on this web are under international and local copyrights &copy;2023. Trespassers are hereby warned!</p>
+                </footer>
+
+    </section>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+
+document.getElementById("main-container").style.display = "none";
+document.getElementById("pageloader").style.display = "block";
+document.getElementById("boding").style.background = "transparent";
+
+setTimeout(() => {
+document.getElementById("main-container").style.display = "block";
+document.getElementById("pageloader").style.display = "none";
+document.getElementById("boding").style.background = "url(work-image.jpg)";
+
+}, 5000);
+
+document.getElementById("open-bar").onclick = function(){
+    let menu = document.getElementById("menu-items");
+    if (menu.style.display == "none") {
+        menu.style.display = "block";
+        document.getElementById("close-bar").style.display = "block";
+        document.getElementById("open-bar").style.display = "none";
         
- }  
- 
+    }
+    else{
+        menu.style.display = "none";
+        document.getElementById("open-bar").style.display = "block";
+        document.getElementById("close-bar").style.display = "none";
+    }
+}
+document.getElementById("close-bar").onclick = function(){
+    let menu = document.getElementById("menu-items");
+    if (menu.style.display == "block") {
+        menu.style.display = "none";
+        document.getElementById("close-bar").style.display = "none";
+        document.getElementById("open-bar").style.display = "block";
+    }
+    else{
+        menu.style.display = "block";
+        document.getElementById("close-bar").style.display = "block";
+        document.getElementById("open-bar").style.display = "none";
+    }
+}
+document.getElementById("about_us").onclick = function(){
+    let about = document.getElementById("about");
+    let newIcon = document.getElementById("icons");
+    if (about.style.display == "none"){
+        about.style.display = "grid";
+        newIcon.style.transform = "rotate(180deg)";
+        newIcon.style.color = "red";
+    
+    }
+    else{
+        about.style.display = "none";
+        newIcon.style.transform = "rotate(0deg)";
+        newIcon.style.color = "aqua";
+    }
+}
+
+document.getElementById("departing").onclick = function(){
+    let depart = document.getElementById("departs");
+    let newIcons = document.getElementById("ikons");
+    if (depart.style.display == "none") {
+        depart.style.display = "grid";
+        newIcons.style.transform = "rotate(180deg)";
+        newIcons.style.color = "red";
+    }
+    else{
+        depart.style.display = "none";
+        newIcons.style.transform = "rotate(0deg)";
+        newIcons.style.color = "aqua";
+    }
+}
+
+const swiper = new Swiper('.swiper', {
+   autoplay:{
+    
+    delay: 3000,
+    disableoninteraction: false,
+   },
+  loop: true,
+
+  //  pagination button
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+//   links to next and previous images/videos
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 });
-enterMe.addEventListener("click", ()=>{  
 
-    bot_texts.innerHTML = ` ${textbox.value}<br>${ time}` + "<br>";
-    bot_texts.style.color = "crimson";
-     bot_texts.style.float = "right";
-    let input = textbox.value;
-    textbox.value = ""; 
-     setTimeout(() => {
-         if(input in bot$Me){
-         bot_texts.innerHTML = ` ${bot$Me[input]}<br>${ time}` + "<br>";
-         bot_texts.style.float = "left";
-         bot_texts.style.color = "green";
-         bot_texts.scrollIntoView({behavior:"auto"});
-         
-     }
- 
-     else{
-         bot_texts.innerHTML = `please try asking something else ${time}`; 
-         bot_texts.style.float = "left";
-         bot_texts.style.color = "green";
-         bot_texts.scrollIntoView({behavior:"auto"});
-         
-     }         
-     }, 3500);
-        
- });
-    
-
-  var bot$Me = {
-         "see you later": "Great! bye",
-         "how are you doing?":"wonderful and you friend?",
-         "how old are you?": "I'm ageless!",
-         "are you wise?": "I'm not solomon! but ask your question",
-         "bye":"See you next time",
-         "hi": "Hey buddy!",
-         "idiot!":"What!?",
-         "ok":"Good!",
-         "Whats up?":"Great!",
-         "What's up?":"Wonderful and you?",
-         "Wow!":"Yea, thats the spirit!",
-         "Wow":"Yoo!",
-         "Can you help me?": "Sure, i can!",
-         "Why?":"I'm working with time",
-         "Lol":"smiles...",
-         "Lol!":"yep!",
-         "Great!": "Yeah!",
-         "Friend": "Hey",
-         "Do you know raymond?":"Yah, i do and what about him?",
-         "Do you know raymond":"Yah, i do and what about him?",
-         "Who is mr raymond?":"Yah, his is from Nigeria and what about him?",
-         "Who is God?":"He is the creator of infinite",
-         "Tell me about him":"I work with time please, check out his profile or ask me something different or click EndChat button!",
-         "Thank you!":"you are welcome!",
-         "Who are you?":"i'm your assistant",
-         "Tell me about you": "i'm mr. chatbot!",
-         "Who created you?": "Funny question!",
-         "Can you add 2 plus 3?": "sure!",
-         "What is 2+10?": "12!",
-         "Gotta go":"ok, bye!",
-         "Who is the president of USA?":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "Who is the president of usa":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "Who is the president of America?":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "Who is the president of america":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "Are you married?":"Talk to me seriously",
-         "What are you doing now?":"im with you",
-         "What's going on?":"nothing buddy",
-         "Whats happening?":"Great buddy",
-         "Whats going on?":"nothing buddy",
-         "What's up?":"nothing buddy",
-         "Good": "Nice to hear",
-         "Really?": "Yep",
-         "Hope all is well?": "Sure, you can count on me!",
-         "So, talk to me": "I'm talking friend",
-         "infinite?": "That's right, yea!",
-         "Whats going on?":"nothing yeah",
-         "Whats your name?": "i'm infinite",
-         "What's your name?":"i'm infinite",
-         "Bye":"yeah, nice talking to you!",
-         "How are you?":"fine and you?",
-         "I have a problem":"i can help",
-         "What is your name?":"i'm infinite",
-        
-         "hello":"Hi, welcome to my world!",
-         "Hello": "HI",
-         "yeah":"How may i help?",
-         "Yeah": "How can i help?",
-         "hey":"Hello!",
-         "Hey":"Hi",
-         "you there?": "Yep",
-         "Are you there?": "yea dude!",
-         "Are you God?": "Is this a joke? I'm infinite but not God!",
-         "See you later": "Great! bye",
-         "How are you doing?":"wonderful and you friend?",
-         "How old are you?": "I'm ageless!",
-         "Are you wise?": "I'm not solomon! but ask your question",
-         "Bye":"See you next time",
-         "Hi": "Hey buddy!",
-         "Idiot!":"What!?",
-         "Ok":"Good!",
-         "whats up?":"Great!",
-         "what's up?":"Wonderful and you?",
-         "wow!":"Yea, thats the spirit!",
-         "wow":"Yoo!",
-         "can you help me?": "Sure, i can!",
-         "why?":"I'm working with time",
-         "lol":"smiles...",
-         "lol!":"yep!",
-         "great!": "Yeah!",
-         "friend": "Hey",
-         "do you know raymond?":"Yah, i do and what about him?",
-         "do you know raymond":"Yah, i do and what about him?",
-         "who is mr raymond?":"Yah, his is from Nigeria and what about him?",
-         "who is God?":"He is the creator of infinite",
-         "tell me about him":"I work with time please, check out his profile or ask me something different or click EndChat button!",
-         "thank you!":"you are welcome!",
-         "who are you?":"i'm your assistant",
-         "tell me about you": "i'm mr. chatbot!",
-         "who created you?": "Funny question!",
-         "can you add 2 plus 3?": "sure!",
-         "what is 2+10?": "12!",
-         "gotta go":"ok, bye!",
-         "who is the president of USA?":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "who is the president of usa":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "who is the president of America?":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "who is the president of america":"As @ May 20th 2023, it was Joe Biden: maybe he is now",
-         "are you married?":"Talk to me seriously",
-         "what are you doing now?":"im with you",
-         "what's going on?":"nothing buddy",
-         "whats happening?":"nothing buddy",
-         "whats going on?":"nothing buddy",
-         "what's up?":"nothing buddy",
-         "whats going on?":"nothing yeah",
-         "whats your name?": "i'm infinite",
-         "what's your name?":"i'm infinite",
-         "bye":"yeah, nice talking to you!",
-         "how are you?":"fine and you?",
-         "i have a problem":"i can help",
-         "what is your name?":"i'm infinite",
-         "": "i don't understand!, type in something",
-         "who is raymond?":"he is a full stack dev!",
-         "do you know him?":"pretty well",
-         "where did he learn web development?":"check out his portfolio",
-         "how old is ogaraga":"Raymond is great",
-         "is he employed?":"check his profile",
-         "where did he graduate from?":"mouau",
-         "who is the founder of google?":"page larry",
-         "who created javascript?":"Brendan Eich",
-         "what's that?":"never mind",
-         "good!":"Thanks!",
-         "good":"thank you!",
-         "ok then":"yep, then!",
-         "ok no problem":"yea buddy!",
-         "have a nice day":"same here",
-         "do have a great day":"great, same to you buddy!",
-         "talk to you later":"ok, bye",
-         "bye":"enjoy yourself buddy!",
-         "can i ask you a question?": "please do",
-         "tell me about football": "soccer started in 1936 or thereabout in greece",
-         "who is the best player in the world?": "he is late!",
-         "what is his name?": "who?",
-         "What?":"I don't understand!",
-         "Who are you?": "I'm infinite!",
-         "What is infinite?": "I,m ageless, sort of cyborg!",
-         "Where are you now?":"I'm always around in the cloud!",
-         "The best player in the world": "i already told you!",
-         "Where are you from?": "i'm always around in the cloud",
-         "How can i learn coding?":"it is simple! just contact:port-ogaraga.vercel.app/home.html!",
-         "Cost of learning programming?":"it depends on your desire and scope of what you want",
-     }; 
-
-     
-// toggle modes for view interests.
-
-    $(()=>{
-        $('.fa-toggle-on').click(()=>{
-            $('body').css("backgroundColor", "gray");
-            $('.fa-toggle-off').show();
-            $('.fa-toggle-on').hide();
-            $('*').css("color", "aqua");
-        });
-        $('.fa-toggle-off').click(()=>{
-            $('body').css("backgroundColor", "#000");
-            $('.fa-toggle-off').hide();
-            $('.fa-toggle-on').show();
-            $('*').css("color", "lime");
-        });
-    });
-    const my_drop_down = document.getElementById("drop_up");
-    const mySearch = document.getElementById("mytext");
-    const myDropList = document.getElementsByClassName("humz");
-   
-    mySearch.addEventListener("keyup", (e)=>{
-        
-        if (my_drop_down.style.display === "none") {
-            my_drop_down.style.display = "flex";
-            my_drop_down.style.flexWrap = "wrap";
-            my_drop_down.style.fontSize = "1rem";
-            my_drop_down .style.background = "crimson";
-           
-        }
-        else{
-            my_drop_down.style.display = "none";
-        }
-        let value = e.target.value;
-        const filter = mySearch.value.toLowerCase();
-        let my_Element;
-        for(my_Element of myDropList){
-            let thembe = my_Element.innerHTML.toLowerCase();
-            if (thembe.includes(filter)) {
-                my_Element.style.display = "list-item";
-            }
-            else {
-                my_Element.style.display = "none";
-            }
-        }
-    })
-
-    let menu;
-    document.getElementById('open').onclick = function(){
-    menu = document.getElementById('dropdown');
-    if (menu.style.display == 'none' && document.getElementById('close').style.display == 'none' &&
-        document.getElementById('open').style.display == 'block') {
-    menu.style.display = 'block';
-    menu.style.backgroundColor = "gray";
-    menu.style.width = "130px";
-    menu.style.height = "270px";
-    menu.style.marginLeft = "-15px";
-    menu.style.marginTop = "-50px";
-    menu.style.zIndex = "1"; 
-    document.getElementById('close').style.display = 'block';
-    document.getElementById('open').style.display = 'none';
-    
-   }
-   else{
-    menu.style.display = 'none';
-    document.getElementById('open').style.display = 'block';
-    document.getElementById('close').style.display = 'none';
-
-   }
-    
-
-    }
-
-    document.getElementById('close').onclick = function(){
-    menu = document.getElementById('dropdown');
-    if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-    document.getElementById('close').style.display = 'none';
-    document.getElementById('open').style.display = 'block';
-   }
-
-   else{
-    menu.style.display = 'none';
-    document.getElementById('open').style.display = 'block';
-    document.getElementById('close').style.display = 'none';
-   }
-
-   
- }
-        const myGlass = document.getElementById('glass');
-        const myClose = document.getElementById('klose');
-        const myInput = document.getElementById('mytext');
-        myGlass.onclick = () => {
-            if (myInput.style.display == "none" && myClose.style.display == "none") {
-                myInput.style.display = "block";
-                myClose.style.display = "block";
-                myGlass.style.display = "none";
-            }
-            else{
-                myGlass.style.display = "block";
-                myInput.style.display = "none";
-                myClose.style.display = "none";
-                
-            }
-        }
-        myClose.onclick = () => {
-            if (myInput.style.display == "block" && myGlass.style.display == "none") {
-                myInput.style.display = "none";
-                myClose.style.display = "none";
-                myGlass.style.display = "block";
-            }
-            else{
-                myGlass.style.display = "none";
-                myInput.style.display = "block";
-                myClose.style.display = "block";
-                
-            }
-        }
-    
-    // alert("God is behind all sound learning world-wide: by Him and for Him, we shall tech the world! You're Welcome to my Portfolio!")
-       
-    //    preloader section
-       document.querySelector('#bodding').style.display = "none";
-       document.getElementById('loader').classList.add('preloader');
-       document.getElementById("mybody").style.background = "transparent";
-
-       setTimeout(() => {
-        document.getElementById('loader').classList.remove('preloader');
-        document.querySelector('#bodding').style.display = "block";
-        document.getElementById("mybody").style.background = "tomato";
-        
-       }, 2000);
-    //    Time of your local device detected
-       setInterval(() => {
-       let ray;
-       ray = document.getElementById('exact-timedate');
-       ray.innerHTML = new Date().toLocaleString();
-       ray.style.color = 'aqua';
-       ray.style.textAlign = 'center';
-        
-    }, 1000);
-       </script>
+    </script>
 </body>
 </html>
