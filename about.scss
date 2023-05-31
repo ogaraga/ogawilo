@@ -76,7 +76,7 @@ body{
             @include myexplain();
             background: var(--mybg);
             border-radius: 10px;
-            width: 50%;
+            width: 30%;
             margin: auto;
             height: auto;
             gap: 10px;
@@ -89,25 +89,22 @@ body{
             @media screen and (max-width:540px) {
                 padding: auto;
                 margin: auto;
-                width: auto;
+                width: 89%;
             
             }
             @keyframes ul {
                 10%{
                     color: white;
                     transition-delay: 4s;
-
                 }
                 40%{
                     color: crimson;
-
                 }
                 70%{
                     color: black;
                 }
                 100%{
                     color: aqua;
-
                 }
             }
             li{
@@ -117,8 +114,8 @@ body{
                 margin: var(--mymargin);
                 font-variant: small-caps;
                 @media screen and (max-width: 540px) {
-                    margin: 5px auto;
-                    width: auto;
+                    margin: 5px 8px;
+                    width: 30%;
     
                 }
             }
