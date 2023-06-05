@@ -148,8 +148,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 70%;
   flex-wrap: wrap;
 }
 .donate-container form #myOne #one_time #one-time {
@@ -181,10 +180,10 @@ body {
 }
 .donate-container form #myOne #one_time #total_1 {
   padding: 5px;
-  width: 30%;
+  width: 40%;
   position: relative;
-  left: -25%;
-  top: 55%;
+  left: 35%;
+  top: 10%;
   background-color: cornsilk;
   border: 0.5px solid aqua;
   outline: none;
@@ -223,7 +222,7 @@ body {
   .donate-container form #myOne #btn {
     width: 80px;
     left: 20%;
-    top: -45%;
+    top: -70%;
     position: absolute;
     font-variant: small-caps;
     margin: 5px auto;
@@ -233,8 +232,8 @@ body {
   padding: 4px;
   width: 60px;
   position: absolute;
-  left: 57%;
-  bottom: -55%;
+  left: 55%;
+  bottom: -10%;
   border: 0.5px solid aqua;
   outline: none;
   border-left: none;
