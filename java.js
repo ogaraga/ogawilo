@@ -99,7 +99,7 @@ function Fcash(fvalue) {
 
     }
     else{
-        total.value = `₦${fvalue}`;
+        total_2.value = `₦${fvalue}`;
         naira.value = "NGN";
     }
 
@@ -107,7 +107,7 @@ function Fcash(fvalue) {
 const next = document.getElementById("next");
 const validation = document.getElementById("validated");
 next.onclick = ()=>{
-    if(total.value !== "" && total_2 !== ""){
+    if(total.value !== "" && total_2.value !== ""){
         total.value = "";
         total_2.value = "";
         validation.innerText = "Selection saved successfully";
