@@ -21,43 +21,47 @@
         <div class="donate-form">
             <form action="" method="post">
                 <div id="myOne">
-                    <div id="one_time">
-                        <button type="button" id="btn">One-time</button>
-                        <input type="button" name="1k" id="one-time" value="₦1k once">
-                        <input type="button" name="2k" id="one-time" value="₦2k once">
-                        <input type="button" name="3k" id="one-time" value="₦3k once"><br>
-                        <input type="button" name="5k" id="one-time" value="₦5k once">
-                        <input type="button" name="10k" id="one-time" value="₦10k once">
-                        <input type="button" name="15k" id="one-time" value="₦15k once">
-                        <input type="text" name="Total" id="total" value="₦">
+                    <button type="button" id="btn">One-time</button>
+                    <div id="one_time" class="one_time">
+                        <input type="button" name="1k" id="one-time" onclick="Fmoney('1,000')" value="₦1k once">
+                        <input type="button" name="2k" id="one-time" onclick="Fmoney('2,000')" value="₦2k once">
+                        <input type="button" name="3k" id="one-time" onclick="Fmoney('3,000')" value="₦3k once"><br>
+                        <input type="button" name="5k" id="one-time" onclick="Fmoney('5,000')" value="₦5k once">
+                        <input type="button" name="10k" id="one-time" onclick="Fmoney('10,000')" value="₦10k once">
+                        <input type="button" name="15k" id="one-time" onclick="Fmoney('15,000')" value="₦15k once">
+                        <input type="text" name="Total" id="total_1"  placeholder="Total Amnt">
                     </div>
                     <select name="money-symbol" id="symbol-1">
-                            <option value="NGN">NGN|Nigerian Naira</option>
-                            <option value="USD">USD|US Dollar</option>
-                            <option value="GBP">GBP|British Pound</option>
-                            <option value="EUR">EUR|Euro</option>
+                            <option id="naira" value="NGN">NGN|Nigerian Naira</option>
+                            <option id="dollar" value="USD">USD|US Dollar</option>
+                            <option id="pounds" value="GBP">GBP|British Pound</option>
+                            <option id="euro" value="EUR">EUR|Euro</option>
                     </select>
                 </div>
-                <div id="myMonth">
-                    <div id="_monthly">
-                        <button type="button" id="btn-mon">Monthly</button>
-                        <input type="button" name="1k" id="monthly" value="₦1k mon">
-                        <input type="button" name="2k" id="monthly" value="₦2k mon">
-                        <input type="button" name="3k" id="monthly" value="₦3k mon"><br>
-                        <input type="button" name="5k" id="monthly" value="₦5k mon">
-                        <input type="button" name="10k" id="monthly" value="₦10k mon">
-                        <input type="button" name="15k" id="monthly" value="₦15k mon">
-                        <input type="text" name="Total" id="total" value="₦">
+                <div id="mymonth">
+                    <button type="button" id="btn-mon">Monthly</button>
+                    <div id="_monthly" style="display: none;">
+                        <input type="button" name="1k" id="monthly" onclick="Fcash('1,000')" value="₦1k mon">
+                        <input type="button" name="2k" id="monthly" onclick="Fcash('2,000')" value="₦2k mon">
+                        <input type="button" name="3k" id="monthly" onclick="Fcash('3,000')" value="₦3k mon"><br>
+                        <input type="button" name="5k" id="monthly" onclick="Fcash('5,000')" value="₦5k mon">
+                        <input type="button" name="10k" id="monthly" onclick="Fcash('10,000')" value="₦10k mon">
+                        <input type="button" name="15k" id="monthly"onclick="Fcash('15,000')" value="₦15k mon">
+                        <input type="text" name="Total" id="total" placeholder="Total Amnt">
                     </div>
-                    <select name="money-symbol" id="symbol-2">
-                        <option value="NGN">NGN|Nigerian Naira</option>
-                        <option value="USD">USD|US Dollar</option>
-                        <option value="GBP">GBP|British Pound</option>
-                        <option value="EUR">EUR|Euro</option>
+                    <select name="money-symbol" id="symbol-2" style="display: none;">
+                        <option id="naiara_2" value="NGN">NGN|Nigerian Naira</option>
+                        <option id="dollar_2" value="USD">USD|US Dollar</option>
+                        <option id="pounds_2" value="GBP">GBP|British Pound</option>
+                        <option id="euro_2" value="EUR">EUR|Euro</option>
                     </select>
+                    
                 </div>
+                <button type="button" id="next">Next</button>
             </form>
+            <span id="validated"></span>
         </div>
     </div>
+    <script src="java.js"></script>
 </body>
 </html>
