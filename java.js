@@ -100,22 +100,21 @@ function Fcash(fvalue) {
     }
     else{
         total_2.value = `₦${fvalue}`;
-        naira.value = "NGN";
+        naira2.value = "NGN";
     }
 
 }
 const next = document.getElementById("next");
 const validation = document.getElementById("validated");
 next.onclick = ()=>{
-    if(total.value !== "" && total_2.value !== ""){
-        total.value = "";
-        total_2.value = "";
+    
+    if(total.value !== "" || total_2.value !== ""){
         validation.innerText = "Selection saved successfully";
         validation.style.color = "darkgreen";
-    }
-    else{
         total.value = "";
         total_2.value = "";
+    }
+    else{
         validation.innerText = "Try make selection if you can";
         validation.style.color = "red";
     }
