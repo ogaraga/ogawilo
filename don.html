@@ -20,46 +20,44 @@
         You have changed the narative with your super gifts and selfless donations. Less than 5% of your donations are injected into administrative purposes. Thank you once again!</p>
         <div class="donate-form">
             <form action="" method="post">
-                <div id="myOne">
-                    <button type="button" id="btn">One-time</button>
+                    <button type="button" id="btn_one">One-time</button>
                     <div id="one_time" class="one_time">
                         <input type="button" name="1k" id="one-time" onclick="Fmoney('1,000')" value="1k once">
                         <input type="button" name="2k" id="one-time" onclick="Fmoney('2,000')" value="2k once">
                         <input type="button" name="3k" id="one-time" onclick="Fmoney('3,000')" value="3k once"><br>
                         <input type="button" name="5k" id="one-time" onclick="Fmoney('5,000')" value="5k once">
                         <input type="button" name="10k" id="one-time" onclick="Fmoney('10,000')" value="10k once">
-                        <input type="button" name="15k" id="one-time" onclick="Fmoney('15,000')" value="15k once">
+                        <input type="button" name="15k" id="one-time" onclick="Fmoney('15,000')" value="15k once"><br>
                         <input type="text" name="Total" id="total_1"  placeholder="Total Amnt">
-                    </div>
-                    <select name="money-symbol" id="symbol-1">
+                <br>    <select name="money-symbol" id="sim-1">
                             <option id="naira" value="NGN">NGN|Nigerian Naira</option>
                             <option id="dollar" value="USD">USD|US Dollar</option>
                             <option id="pounds" value="GBP">GBP|British Pound</option>
                             <option id="euro" value="EUR">EUR|Euro</option>
-                    </select>
-                </div><br>
-                <div id="mymonth">
-                    <button type="button" id="btn-mon">Monthly</button>
-                    <div id="_monthly" style="display: none;">
+                        </select>
+                    </div>
+                    
+                
+    
+                    <button type="button" id="btn_mon">Monthly</button>
+                    <div style="display: none;" id="_monthly">
                         <input type="button" name="1k" id="monthly" onclick="Fcash('1,000')" value="1k mon">
                         <input type="button" name="2k" id="monthly" onclick="Fcash('2,000')" value="2k mon">
                         <input type="button" name="3k" id="monthly" onclick="Fcash('3,000')" value="3k mon"><br>
                         <input type="button" name="5k" id="monthly" onclick="Fcash('5,000')" value="5k mon">
                         <input type="button" name="10k" id="monthly" onclick="Fcash('10,000')" value="10k mon">
-                        <input type="button" name="15k" id="monthly"onclick="Fcash('15,000')" value="15k mon">
-                        <input type="text" name="Total" id="total" placeholder="Total Amnt">
+                        <input type="button" name="15k" id="monthly"onclick="Fcash('15,000')" value="15k mon"><br>
+                        <input type="text" name="Total" id="total_2" placeholder="Total Amnt">
+                <br>    <select name="money-symbol" id="sim-2">
+                            <option id="naiara_2" value="NGN">NGN|Nigerian Naira</option>
+                            <option id="dollar_2" value="USD">USD|US Dollar</option>
+                            <option id="pounds_2" value="GBP">GBP|British Pound</option>
+                            <option id="euro_2" value="EUR">EUR|Euro</option>
+                        </select>
                     </div>
-                    <select name="money-symbol" id="symbol-2" style="display: none;">
-                        <option id="naiara_2" value="NGN">NGN|Nigerian Naira</option>
-                        <option id="dollar_2" value="USD">USD|US Dollar</option>
-                        <option id="pounds_2" value="GBP">GBP|British Pound</option>
-                        <option id="euro_2" value="EUR">EUR|Euro</option>
-                    </select>
-                
-                </div>
                 <button type="button" id="next">Next</button>
             </form>
-            <span style="margin-top: 40px; text-align: center;" id="validated"></span>
+            <span id="validated"></span>
         </div>
     </div>
     <script src="java.js"></script>

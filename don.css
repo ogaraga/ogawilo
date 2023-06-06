@@ -107,281 +107,321 @@ body {
   background-color: moccasin;
   width: 70%;
   max-width: 400px;
-  height: 130px;
+  height: 150px;
   padding: 50px;
 }
 @media screen and (max-width: 540px) {
   .donate-container .donate-form {
     margin: auto 0%;
     width: auto;
-    height: auto;
+    height: 130px;
     position: relative;
     right: 0%;
     left: 0%;
   }
 }
-.donate-container form {
+.donate-container .donate-form form {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto 10px;
+  flex-direction: column;
   justify-content: space-between;
-  position: relative;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  width: auto;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 @media screen and (max-height: 540px) {
-  .donate-container form {
-    position: relative;
+  .donate-container .donate-form form {
+    position: absolute;
     left: 50%;
     right: 50%;
+    margin: auto 10px;
   }
 }
-.donate-container form #myOne {
-  display: grid;
-  place-content: center;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #myOne {
-    margin-top: -17px;
-  }
-}
-.donate-container form #myOne #one_time {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: 70%;
-  flex-wrap: wrap;
-}
-.donate-container form #myOne #one_time #one-time {
-  padding: 5px;
-  margin: 1px auto;
-  flex: 1;
-  position: relative;
-  left: 25%;
-  top: 0%;
-  width: 70px;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  background-color: grey;
-  cursor: pointer;
-  color: blue;
-  transition: all 0.8s;
-}
-.donate-container form #myOne #one_time #one-time:hover {
-  background-color: lightslategrey;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #myOne #one_time #one-time {
-    position: relative;
-    left: 25%;
-    top: auto;
-    margin: 1px auto;
-  }
-}
-.donate-container form #myOne #one_time #total_1 {
-  padding: 5px;
-  width: 40%;
-  position: relative;
-  left: 35%;
-  top: 10%;
-  background-color: cornsilk;
-  border: 0.5px solid aqua;
-  outline: none;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #myOne #one_time #total_1 {
-    width: 45%;
-    position: relative;
-    left: 35%;
-    top: 0%;
-    margin: 3px auto;
-  }
-}
-.donate-container form #myOne #btn {
-  font-weight: bold;
-  padding: 5px;
-  width: 80px;
-  left: 30%;
-  top: -70%;
-  z-index: 1;
-  font-variant: small-caps;
+.donate-container .donate-form form #btn_one {
+  padding: 5px 10px;
+  width: 115px;
+  margin: 10px;
+  right: 0;
   position: absolute;
-  margin: 5px auto;
   background-color: blue;
-  color: #fff;
-  border: none;
-  outline: none;
-}
-.donate-container form #myOne #btn:hover {
-  cursor: pointer;
-  transition: all 0.9s;
-  background-color: aquamarine;
-  color: #000;
-}
-@media screen and (max-height: 540px) {
-  .donate-container form #myOne #btn {
-    width: 80px;
-    left: 20%;
-    top: -70%;
-    position: absolute;
-    font-variant: small-caps;
-    margin: 5px auto;
-  }
-}
-.donate-container form #myOne #symbol-1 {
-  padding: 4px;
-  width: 60px;
-  position: absolute;
-  left: 55%;
-  bottom: -10%;
-  border: 0.5px solid aqua;
-  outline: none;
-  border-left: none;
-  cursor: pointer;
-  background-color: cornsilk;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #myOne #symbol-1 {
-    width: 60px;
-    position: absolute;
-    left: 68%;
-    bottom: 5%;
-  }
-}
-.donate-container form #mymonth {
-  display: grid;
-  place-content: center;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #mymonth {
-    margin-top: -17px;
-  }
-}
-.donate-container form #mymonth #_monthly {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  width: -moz-fit-content;
-  width: fit-content;
-  flex-wrap: wrap;
-}
-.donate-container form #mymonth #_monthly #monthly {
-  padding: 5px;
-  margin: 1px auto;
-  flex: 1;
-  position: relative;
-  right: -25%;
-  top: 0%;
-  width: 70px;
-  border: none;
-  outline: none;
-  border-radius: 3px;
-  color: #fff;
-  background-color: grey;
+  color: white;
   cursor: pointer;
   transition: all 0.8s;
-}
-.donate-container form #mymonth #_monthly #monthly:hover {
-  background-color: lightslategrey;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #mymonth #_monthly #monthly {
-    margin: 1px auto;
-  }
-}
-.donate-container form #mymonth #_monthly #total {
-  padding: 5px;
-  width: 30%;
-  background-color: cornsilk;
-  border: 0.5px solid aqua;
-  outline: none;
-  position: relative;
-  right: 27%;
-  top: 55%;
-}
-@media screen and (max-width: 540px) {
-  .donate-container form #mymonth #_monthly #total {
-    width: 45%;
-    top: 0%;
-    right: -35%;
-    margin: 5px auto;
-  }
-}
-.donate-container form #mymonth #btn-mon {
-  padding: 5px;
-  width: 80px;
-  font-weight: bold;
-  font-variant: small-caps;
-  position: absolute;
-  right: 30%;
-  top: -70%;
-  margin: 5px auto;
-  background-color: aqua;
-  color: grey;
   border: none;
+  z-index: 1;
   outline: none;
+  font-weight: bold;
+  font-size: 20px;
 }
-.donate-container form #mymonth #btn-mon:hover {
-  cursor: pointer;
-  transition: all 0.9s;
-  background-color: #000;
-  color: #fff;
+.donate-container .donate-form form #btn_one:hover {
+  background-color: cornflowerblue;
+  color: coral;
 }
 @media screen and (max-width: 600px) {
-  .donate-container form #mymonth #btn-mon {
-    width: 80px;
-    right: 8%;
-    top: -70%;
-    font-variant: small-caps;
+  .donate-container .donate-form form #btn_one {
+    right: 0;
     position: absolute;
-    margin: 5px auto;
+    margin: 10px;
   }
 }
-.donate-container form #mymonth #symbol-2 {
-  padding: 4px;
-  width: 60px;
+.donate-container .donate-form form .one_time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
   position: absolute;
-  right: 27%;
-  bottom: -55%;
-  border: 0.5px solid aqua;
-  outline: none;
-  border-left: none;
-  cursor: pointer;
-  background-color: cornsilk;
+  top: 35px;
+  height: auto;
+  margin: auto 10px;
+  border: 1px solid whitesmoke;
+  padding: 10px 15px;
+  background-color: bisque;
 }
-@media screen and (max-width: 540px) {
-  .donate-container form #mymonth #symbol-2 {
-    width: 60px;
-    position: absolute;
-    right: 15%;
-    bottom: 7%;
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form .one_time {
+    margin: 10px;
+    width: auto;
+    height: auto;
   }
 }
-.donate-container form #next {
+.donate-container .donate-form form .one_time #one-time {
   padding: 10px;
-  background-color: green;
-  font-weight: bold;
-  position: absolute;
-  right: 15%;
-  bottom: -38px;
-  margin: auto;
+  flex: 1;
+  background-color: darkkhaki;
+  color: aqua;
   border: none;
   outline: none;
   cursor: pointer;
-  transition: all 0.7s;
-  color: aliceblue;
-  z-index: 1;
+  margin: 2px;
+  transition: all 1s;
 }
-.donate-container form #next:hover {
-  background-color: aqua;
-  color: red;
+.donate-container .donate-form form .one_time #one-time:hover {
+  background-color: aliceblue;
+  color: black;
 }
 @media screen and (max-width: 540px) {
-  .donate-container form #next {
-    position: absolute;
-    right: -10%;
-    bottom: 0%;
+  .donate-container .donate-form form .one_time #one-time {
+    width: auto;
+    height: auto;
+    padding: auto;
+  }
+}
+.donate-container .donate-form form .one_time #total_1 {
+  padding: 5px;
+  width: 185px;
+  border: none;
+  outline: none;
+  background-color: coral;
+  color: white;
+}
+.donate-container .donate-form form .one_time #total_1:focus {
+  background-color: aqua;
+  color: blue;
+  transition: padding 0.5s;
+  cursor: grab;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form .one_time #total_1 {
+    max-width: 200px;
     margin: auto;
+    padding: auto;
+  }
+}
+.donate-container .donate-form form .one_time #sim-1 {
+  padding: 4px;
+  width: 60px;
+  margin-top: -25px;
+  border: none;
+  outline: none;
+  margin-left: 135px;
+  cursor: pointer;
+}
+.donate-container .donate-form form .one_time #sim-1:hover {
+  background-color: #000;
+  color: crimson;
+  transition: all 0.8s;
+}
+.donate-container .donate-form form .one_time #sim-1 option {
+  background-color: grey;
+  color: ghostwhite;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form .one_time #sim-1 {
+    width: 60px;
+    height: auto;
+    margin-right: 0;
+    margin-top: -25px;
+  }
+}
+.donate-container .donate-form form #btn_mon {
+  padding: 5px 10px;
+  width: 115px;
+  margin: 10px;
+  left: 0;
+  position: absolute;
+  background-color: grey;
+  color: gold;
+  cursor: pointer;
+  transition: all 0.8s;
+  border: none;
+  z-index: 1;
+  outline: none;
+  font-weight: bold;
+  font-size: 20px;
+}
+.donate-container .donate-form form #btn_mon:hover {
+  background-color: rgba(100, 237, 235, 0.611);
+  color: coral;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form #btn_mon {
+    margin: 10px;
+    left: 0;
+    position: absolute;
+  }
+}
+.donate-container .donate-form form #_monthly {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200px;
+  position: absolute;
+  top: 35px;
+  height: auto;
+  margin: auto 10px;
+  border: 1px solid whitesmoke;
+  padding: 10px 15px;
+  background-color: bisque;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form #_monthly {
+    margin: 10px;
+    width: auto;
+    height: auto;
+  }
+}
+.donate-container .donate-form form #_monthly #monthly {
+  padding: 10px;
+  flex: 1;
+  background-color: darkkhaki;
+  color: aqua;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 2px;
+  transition: all 1s;
+}
+.donate-container .donate-form form #_monthly #monthly:hover {
+  background-color: aliceblue;
+  color: black;
+}
+@media screen and (max-width: 540px) {
+  .donate-container .donate-form form #_monthly #monthly {
+    width: auto;
+    height: auto;
+    padding: auto;
+  }
+}
+.donate-container .donate-form form #_monthly #total_2 {
+  padding: 5px;
+  width: 185px;
+  border: none;
+  outline: none;
+  background-color: coral;
+  color: white;
+}
+.donate-container .donate-form form #_monthly #total_2:focus {
+  background-color: aqua;
+  color: blue;
+  transition: padding 0.5s;
+  cursor: grab;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form #_monthly #total_2 {
+    max-width: 200px;
+    margin: auto;
+    padding: auto;
+  }
+}
+.donate-container .donate-form form #_monthly #sim-2 {
+  padding: 4px;
+  width: 60px;
+  margin-top: -25px;
+  border: none;
+  outline: none;
+  margin-left: 135px;
+  cursor: pointer;
+}
+.donate-container .donate-form form #_monthly #sim-2:hover {
+  background-color: #000;
+  color: crimson;
+  transition: all 0.8s;
+}
+.donate-container .donate-form form #_monthly #sim-2 option {
+  background-color: grey;
+  color: ghostwhite;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form #_monthly #sim-2 {
+    width: 60px;
+    height: auto;
+    margin-right: 0;
+    margin-top: -25px;
+  }
+}
+.donate-container .donate-form form #next {
+  position: relative;
+  padding: 10px;
+  bottom: -195px;
+  margin: auto 10px;
+  width: auto;
+  cursor: pointer;
+  background-color: grey;
+  color: white;
+  transition: all 0.8s;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+.donate-container .donate-form form #next:hover {
+  color: coral;
+  background-color: burlywood;
+}
+@media screen and (max-width: 600px) {
+  .donate-container .donate-form form #next {
+    bottom: -200px;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: fit;
+    margin: auto 10px;
+  }
+}
+.donate-container .donate-form #validated {
+  position: absolute;
+  bottom: 8px;
+  font-size: 20px;
+  text-align: center;
+  left: 10%;
+  right: 10%;
+}
+@media screen and (max-width: 540px) {
+  .donate-container .donate-form #validated {
+    bottom: -35px;
+    font-size: 20px;
+    text-align: center;
+    left: 10%;
+    right: 10%;
   }
 }/*# sourceMappingURL=don.css.map */
