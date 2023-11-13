@@ -2,48 +2,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100vw;
-  max-height: 100vh;
-  overflow: visible;
   font-family: Verdana, Tahoma, sans-serif;
-}
-@media screen and (max-width: 500px) {
-  * {
-    max-width: 100%;
-    margin: auto;
-    height: auto;
-  }
-}
-@media screen and (max-width: 800px) {
-  * {
-    max-width: 100%;
-    margin: auto;
-    height: auto;
-  }
-}
-@media screen and (max-width: 1200px) {
-  * {
-    max-width: 100%;
-    margin: auto;
-    height: auto;
-  }
 }
 
 #main-container {
-  background: linear-gradient(to right, magenta, teal, green, orangered);
+  background: linear-gradient(to right, aliceblue, aliceblue, aliceblue, aliceblue);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: auto;
-  max-width: 100vw;
-  max-height: 500vh;
 }
 
 .loader-container {
-  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   position: relative;
@@ -75,30 +47,36 @@
   }
 }
 
-header {
-  background: rgba(0, 0, 0, 0.912);
-  max-width: 100vw;
+.swiper-slide {
   width: 100%;
   height: auto;
 }
-@media screen and (max-width: 540px) {
+
+.swiper-wrapper h4 {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  color: white;
+}
+
+header {
+  background-color: gray;
+  min-width: 100vw;
+  height: auto;
+  margin: auto;
+}
+@media screen and (max-width: 600px) {
   header {
-    width: 100%;
-    height: auto;
-    background-attachment: fixed;
-    position: fixed;
-    visibility: visible;
-    z-index: 10;
+    min-width: 100%;
+    height: 30vh;
   }
 }
 
 .container {
-  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
-  max-width: 100%;
+  max-width: 100vw;
   max-height: auto;
   margin: auto;
 }
@@ -106,21 +84,21 @@ header {
   width: 300px;
   height: 300px;
   border: 1px solid green;
-  border-radius: 100%;
+  border-radius: 50%;
   border-style: double;
   position: static;
   background: linear-gradient(to bottom, green, lightgreen, black);
-  margin: auto 40px;
+  margin-left: 10px;
   box-shadow: 2px 2px 2px 3px green, -2px -2px 2px 3px green;
   animation: logo 30s ease-in-out infinite 3s;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 600px) {
   .container .logo {
-    max-width: 100%;
-    height: auto;
-    margin: auto;
-    display: none;
-    font-size: small;
+    position: absolute;
+    opacity: 0.3;
+    top: -10%;
+    left: 20%;
+    transform: translate(20%, 20%);
   }
 }
 .container .logo .p1 {
@@ -155,7 +133,7 @@ header {
   right: 20px;
   top: 160px;
   text-align: center;
-  color: white;
+  color: black;
 }
 .container .logo .p2 {
   text-align: center;
@@ -166,7 +144,7 @@ header {
   right: 20px;
   width: -moz-fit-content;
   width: fit-content;
-  color: white;
+  color: black;
 }
 .container .logo .p4 {
   text-align: center;
@@ -180,7 +158,7 @@ header {
   25% {
     transform: scale(1);
     opacity: 1;
-    background: rgba(0, 0, 0, 0.912);
+    background: gray;
   }
   50% {
     transform: translate(10px, -10px) scale(0.00008) rotate(1turn);
@@ -232,45 +210,20 @@ header {
   color: goldenrod;
 }
 .container .navbar-items {
-  margin: auto -22%;
-  max-width: 100%;
+  margin: auto;
   font-variant: small-caps;
-  z-index: 80;
-  position: absolute;
-  top: 15%;
-  left: 25%;
-}
-@media screen and (max-width: 540px) {
-  .container .navbar-items {
-    position: absolute;
-    top: 5%;
-    left: 25%;
-    z-index: 80;
-  }
 }
 .container .navbar-items ul {
-  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
-  position: relative;
-  left: 60%;
-  right: 40%;
 }
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 600px) {
   .container .navbar-items ul {
     display: none;
     margin: auto;
-    padding-top: 30px;
-    z-index: 80;
-    line-height: 1.5;
-    background-color: rgba(0, 0, 0, 0.912);
-    width: 260px;
+    background-color: gray;
     height: auto;
-    position: relative;
-    top: 0;
-    left: -30px;
   }
 }
 .container .navbar-items ul li {
@@ -281,7 +234,7 @@ header {
 .container .navbar-items ul li a {
   text-decoration: none;
   padding: 20px;
-  color: white;
+  color: black;
   opacity: 1;
 }
 .container .navbar-items ul li a:hover {
@@ -369,9 +322,7 @@ header {
 }
 
 .slider-container {
-  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   max-width: 100vw;
@@ -386,13 +337,11 @@ header {
   }
 }
 .slider-container .swiper {
-  max-width: 600px;
-  height: 500px;
+  max-width: 400px;
+  height: 300px;
 }
 .slider-container .swiper .swiper-wrapper {
-  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   width: auto;
@@ -400,8 +349,8 @@ header {
   margin: auto;
 }
 .slider-container .swiper .swiper-wrapper .swiper-slide img {
-  width: 100%;
-  height: auto;
+  width: 400px;
+  height: 400px;
 }
 @media screen and (max-width: 900px) {
   .slider-container .swiper .swiper-wrapper .swiper-slide img {
@@ -435,7 +384,6 @@ header {
   text-align: center;
   font-size: 25px;
   margin: 10px auto;
-  color: antiquewhite;
 }
 .main-content #believe {
   text-align: justify;
@@ -443,7 +391,6 @@ header {
   font-size: 20px;
   text-indent: 50px;
   line-height: 1.5;
-  color: white;
 }
 .main-content ul {
   margin: auto;
@@ -454,9 +401,7 @@ header {
   border-style: none;
   height: auto;
   border-width: 20px;
-  font-size: 20px;
   display: flex;
-  justify-content: center;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -473,7 +418,6 @@ header {
 }
 .main-content ul li {
   padding: 10px;
-  color: white;
   list-style: none;
   margin: auto 15px;
 }
@@ -492,7 +436,6 @@ header {
   padding: 10px;
 }
 .media-content #mediap {
-  color: whitesmoke;
   text-align: justify;
   max-width: 100%;
   text-indent: 50px;
@@ -522,7 +465,6 @@ header {
   background-color: green;
   border-radius: 50%;
   position: relative;
-  color: white;
   right: -20px;
   font-size: 25px;
   font-weight: bold;
@@ -556,13 +498,11 @@ header {
   text-align: justify;
   font-size: 25px;
   margin: auto 20px;
-  color: white;
 }
 .quick-link address {
   margin: 10px 20px;
   line-height: 1.4;
   font-size: 18px;
-  color: white;
 }
 
 #myfooter {
